@@ -8,12 +8,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var itemTextField: UITextField!
+    @IBOutlet var tableView: UITableView!
+    
+    let shoppingList = ShoppingList();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        tableView.dataSource = shoppingList
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 
-
+    @IBAction func insertButtonPressed(sender: UIButton) {
+        print("inserted an item into list: \(String(describing: itemTextField.text))")
+        
+        guard let text = itemTextField.text else{
+            return
+        }
+        
+        itemTextField.text = ""
+        
+        shoppingList.addItem(item: text)
+        tableView.reloadData()
+    }
 }
-
