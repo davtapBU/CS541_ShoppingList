@@ -14,6 +14,11 @@ class ShoppingList: NSObject {
     func addItem(item:String) {
         items.append(item)
     }
+    
+    func removeItem(Idx:Int) {
+        items.remove(at: Idx)
+    }
+
 }
 
 extension ShoppingList: UITableViewDataSource {
@@ -29,5 +34,12 @@ extension ShoppingList: UITableViewDataSource {
         
         cell.textLabel!.text = item
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            self.removeItem(Idx: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
     }
 }

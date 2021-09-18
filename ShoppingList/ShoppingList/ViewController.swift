@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var itemTextField: UITextField!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var tableViewCell: UITableViewCell!
     
     let shoppingList = ShoppingList();
     
@@ -37,5 +38,8 @@ class ViewController: UIViewController {
         
         shoppingList.addItem(item: text)
         tableView.reloadData()
+    }
+    
+    @IBAction func listItemPressed(sender: UITableViewCell) {
     }
 }
