@@ -28,18 +28,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func insertButtonPressed(sender: UIButton) {
-        print("inserted an item into list: \(String(describing: itemTextField.text))")
         
         guard let text = itemTextField.text else{
             return
         }
         
         itemTextField.text = ""
-        
-        shoppingList.addItem(item: text)
+        if(text != "")
+        {
+            print("inserted an item into list: \(String(describing: itemTextField.text))")
+            shoppingList.addItem(item: text)
+        }
         tableView.reloadData()
-    }
-    
-    @IBAction func listItemPressed(sender: UITableViewCell) {
     }
 }
