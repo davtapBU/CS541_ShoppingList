@@ -52,6 +52,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="returnKeyPressedWithSender:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="UZ1-Z1-oV0"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -59,16 +62,15 @@
                         <constraints>
                             <constraint firstItem="6WM-hZ-0fT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0mM-WS-kAv"/>
                             <constraint firstItem="6WM-hZ-0fT" firstAttribute="top" secondItem="yBd-Pg-A5j" secondAttribute="bottom" constant="33" id="1eT-if-QnS"/>
-                            <constraint firstItem="aOz-OU-21V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5IR-lM-7BF"/>
-                            <constraint firstItem="aOz-OU-21V" firstAttribute="top" secondItem="6WM-hZ-0fT" secondAttribute="bottom" constant="26" id="6R8-HM-I5o"/>
+                            <constraint firstItem="aOz-OU-21V" firstAttribute="top" secondItem="SlJ-2I-KJT" secondAttribute="bottom" constant="1" id="KHQ-EP-pAh"/>
                             <constraint firstItem="yBd-Pg-A5j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="L6w-4H-aq6"/>
-                            <constraint firstItem="yBd-Pg-A5j" firstAttribute="centerX" secondItem="aOz-OU-21V" secondAttribute="centerX" id="QJz-8G-MYm"/>
+                            <constraint firstItem="aOz-OU-21V" firstAttribute="leading" secondItem="6WM-hZ-0fT" secondAttribute="leading" id="Pgc-8X-ldK"/>
+                            <constraint firstItem="aOz-OU-21V" firstAttribute="centerX" secondItem="yBd-Pg-A5j" secondAttribute="centerX" id="aBm-Lb-uWb"/>
                             <constraint firstItem="SlJ-2I-KJT" firstAttribute="top" secondItem="yBd-Pg-A5j" secondAttribute="bottom" constant="8" id="g5Q-62-uwU"/>
                             <constraint firstItem="yBd-Pg-A5j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="ldJ-3j-wd3"/>
                             <constraint firstItem="SlJ-2I-KJT" firstAttribute="leading" secondItem="6WM-hZ-0fT" secondAttribute="trailing" constant="21" id="lhX-sS-qpv"/>
-                            <constraint firstItem="6WM-hZ-0fT" firstAttribute="leading" secondItem="aOz-OU-21V" secondAttribute="leading" id="xRn-jL-CRR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aOz-OU-21V" secondAttribute="bottom" constant="99" id="x3d-Of-1F8"/>
                             <constraint firstItem="6WM-hZ-0fT" firstAttribute="centerY" secondItem="SlJ-2I-KJT" secondAttribute="centerY" id="xfh-VQ-xpb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aOz-OU-21V" secondAttribute="bottom" constant="99" id="y3a-Zo-B5C"/>
                         </constraints>
                     </view>
                     <connections>

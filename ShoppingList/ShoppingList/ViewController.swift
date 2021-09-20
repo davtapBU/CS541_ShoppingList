@@ -26,6 +26,20 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func returnKeyPressed(sender: UITextField) {
+        guard let text = itemTextField.text else{
+            return
+        }
+        
+        itemTextField.text = ""
+        if(text != "")
+        {
+            print("inserted an item into list: \(String(describing: itemTextField.text))")
+            shoppingList.addItem(item: text)
+        }
+        tableView.reloadData()
+    }
 
     @IBAction func insertButtonPressed(sender: UIButton) {
         
