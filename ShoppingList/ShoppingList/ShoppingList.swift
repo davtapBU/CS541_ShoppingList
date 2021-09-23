@@ -18,6 +18,10 @@ class ShoppingList: NSObject {
     func removeItem(Idx:Int) {
         items.remove(at: Idx)
     }
+    
+    func addItemAt(item:String, Idx:Int){
+        items.insert(item, at: Idx)
+    }
 
 }
 
@@ -41,5 +45,15 @@ extension ShoppingList: UITableViewDataSource {
             self.removeItem(Idx: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let itemToMove = items[sourceIndexPath.row]
+        self.removeItem(Idx: sourceIndexPath.row)
+        self.addItemAt(item: itemToMove, Idx: destinationIndexPath.row)
     }
 }

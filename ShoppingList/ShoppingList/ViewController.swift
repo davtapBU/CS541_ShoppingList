@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var itemTextField: UITextField!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var tableViewCell: UITableViewCell!
     
     let shoppingList = ShoppingList();
     
@@ -32,12 +31,12 @@ class ViewController: UIViewController {
             return
         }
         
-        itemTextField.text = ""
         if(text != "")
         {
             print("inserted an item into list: \(String(describing: itemTextField.text))")
             shoppingList.addItem(item: text)
         }
+        itemTextField.text = ""
         tableView.reloadData()
     }
 
@@ -47,12 +46,22 @@ class ViewController: UIViewController {
             return
         }
         
-        itemTextField.text = ""
         if(text != "")
         {
             print("inserted an item into list: \(String(describing: itemTextField.text))")
             shoppingList.addItem(item: text)
         }
+        itemTextField.text = ""
         tableView.reloadData()
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: true)
+        self.tableView.isEditing = editing
+    }
+    
+    @IBAction func startEditing(_ sender: UIButton) {
+        isEditing = !isEditing
+        setEditing(isEditing, animated: true)
     }
 }
