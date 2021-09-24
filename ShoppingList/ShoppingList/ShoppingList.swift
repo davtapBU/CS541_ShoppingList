@@ -9,18 +9,40 @@ import UIKit
 
 class ShoppingList: NSObject {
     
+    private let fileURL:NSURL = {
+        let documentDirectoryURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectoryURL = documentDirectoryURLs .first!
+        return documentDirectoryURL.appendingPathComponent("shoppingList.items") as NSURL
+    }()
+    
     private var items: [String] = []
     
     func addItem(item:String) {
         items.append(item)
+        saveItems()
     }
     
     func removeItem(Idx:Int) {
         items.remove(at: Idx)
+        saveItems()
     }
     
     func addItemAt(item:String, Idx:Int){
         items.insert(item, at: Idx)
+        saveItems()
+    }
+    
+    func saveItems() {
+        let itemsArray = items as NSArray
+        if !itemsArray.write(to: fileURL as URL, atomically: true) {
+            print("Couldn't save shoppinh list")
+        }
+    }
+    
+    func loadItems() {
+        if let itemsArray = NSArray(contentsOf: fileURL as URL) as? [String] {
+            items = itemsArray
+        }
     }
 
 }

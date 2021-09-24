@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         tableView.dataSource = shoppingList
+        
+        shoppingList.loadItems()
     }
     
     override func didReceiveMemoryWarning() {
