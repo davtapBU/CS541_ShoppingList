@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOz-OU-21V">
-                                <rect key="frame" x="20" y="217" width="374" height="546"/>
+                                <rect key="frame" x="20" y="217" width="374" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="systemTealColor"/>
                             </tableView>
@@ -61,8 +61,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aOz-OU-21V" secondAttribute="bottom" constant="99" id="4fT-F0-mHa"/>
                             <constraint firstItem="6WM-hZ-0fT" firstAttribute="centerY" secondItem="SlJ-2I-KJT" secondAttribute="centerY" id="7om-d8-EyU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aOz-OU-21V" secondAttribute="bottom" constant="22" id="BLJ-Fd-DCO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SlJ-2I-KJT" secondAttribute="trailing" constant="43" id="DoO-RS-XFO"/>
                             <constraint firstItem="aOz-OU-21V" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EFs-5N-yvi"/>
                             <constraint firstItem="yBd-Pg-A5j" firstAttribute="centerX" secondItem="aOz-OU-21V" secondAttribute="centerX" id="Frm-Jv-79g"/>
                             <constraint firstItem="6WM-hZ-0fT" firstAttribute="leading" secondItem="aOz-OU-21V" secondAttribute="leading" id="InK-An-kDs"/>

@@ -11,7 +11,7 @@ class ShoppingList: NSObject {
     
     private let fileURL:NSURL = {
         let documentDirectoryURLs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentDirectoryURL = documentDirectoryURLs .first!
+        let documentDirectoryURL = documentDirectoryURLs.first!
         return documentDirectoryURL.appendingPathComponent("shoppingList.items") as NSURL
     }()
     
