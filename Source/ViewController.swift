@@ -41,21 +41,6 @@ class ViewController: UIViewController {
         itemTextField.text = ""
         tableView.reloadData()
     }
-
-    @IBAction func insertButtonPressed(sender: UIButton) {
-        
-        guard let text = itemTextField.text else{
-            return
-        }
-        
-        if(text != "")
-        {
-            print("inserted an item into list: \(String(describing: itemTextField.text))")
-            shoppingList.addItem(item: text)
-        }
-        itemTextField.text = ""
-        tableView.reloadData()
-    }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: true)
