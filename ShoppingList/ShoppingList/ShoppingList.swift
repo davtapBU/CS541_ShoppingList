@@ -35,7 +35,7 @@ class ShoppingList: NSObject {
     func saveItems() {
         let itemsArray = items as NSArray
         if !itemsArray.write(to: fileURL as URL, atomically: true) {
-            print("Couldn't save shoppinh list")
+            print("Couldn't save shopping list")
         }
     }
     
